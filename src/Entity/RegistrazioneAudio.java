@@ -1,4 +1,4 @@
-package Entità;
+package Entity;
 
 import Interfaccia.Riproducibile;
 
@@ -16,7 +16,7 @@ public class RegistrazioneAudio extends ElementoMultimediale implements Riproduc
         String v = "";
         for (int i = 0; i < volume; i++) v += "!";
         for (int i = 0; i < durata; i++) {
-            System.out.println(this.titolo + " " + v);
+            System.out.println(this.titolo +  v);
         }
     }
     @Override

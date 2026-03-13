@@ -1,19 +1,23 @@
-import Entità.*;
+import Entity.ElementoMultimediale;
+import Entity.RegistrazioneAudio;
+import Entity.Video;
+import Entity.Immagine;
 
 public class MainPlayer {
     public static void main(String[] args) {
-        ElementoMultimediale[] canzone = new ElementoMultimediale[3];
+        ElementoMultimediale[] elementi = new ElementoMultimediale[5];
 
-       canzone[0] = new RegistrazioneAudio("Stelle", 3, 4);
-        canzone[1] = new RegistrazioneAudio("Canzone D'amore", 2, 2);
-        canzone[2] = new RegistrazioneAudio("Rap", 1, 5);
+       elementi[0] = new RegistrazioneAudio("Stelle", 3, 4);
+        elementi[1] = new RegistrazioneAudio("Canzone D'amore", 2, 2);
+        elementi[2] = new RegistrazioneAudio("Mai Più", 1, 5);
+        elementi[3] = new Video("Film", 2, 3, 4);
+        elementi[4] = new Immagine("Tramonto", 5);
 
-
-        System.out.println(" avvio canzone");
-        for (int i = 0; i < canzone.length; i++) {
+        System.out.println(" Avvio ");
+        for (int i = 0; i < elementi.length; i++) {
             System.out.println("Esecuzione elemento " + (i + 1) + ":");
 
-            canzone[i].esegui();
+            elementi[i].esegui();
         }
     }
 }
